@@ -135,7 +135,7 @@ const Login = () => {
       </div>
       <div className="w-full md:w-1/2 flex items-center justify-center">
         <img
-          src="./images/lofiimage.png"
+          src="./images/lofiimage.PNG"
           alt="lofiimage"
           className="rounded-md"
         />
