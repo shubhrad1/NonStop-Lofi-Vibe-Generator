@@ -54,15 +54,16 @@ const Signup = () => {
       setError(true);
     }
   };
+
   return (
     <motion.div
-      className="bg-black h-screen text-white flex items-center justify-center overflow-hidden"
+      className="bg-black h-auto text-white flex flex-col sm:flex-row sm:h-auto items-center justify-center md:h-screen md:overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="w-1/2">
+      <div className="sm:w-1/2">
         <form onSubmit={handleSubmit} action="" className="">
           <h1 className="text-5xl uppercase tracking-wider text-center mt-10 mb-2">
             Sign up
@@ -75,7 +76,7 @@ const Signup = () => {
               type="text"
               placeholder="Enter Username"
               id="username"
-              className="mt-2 w-full bg-black border-solid border-2 border-white text-white p-2 rounded-md text-xl mr-40"
+              className="mt-2 w-full bg-black border-solid border-2 border-white text-white p-2 rounded-md text-xl sm:mr-40"
               onChange={handleChange}
             />
             <br />
@@ -153,11 +154,11 @@ const Signup = () => {
             </button>
           </div>
 
-          <p className="">{error && "Something went wrong"}</p>
+          <p className="text-center">{error && "Something went wrong"}</p>
         </form>
       </div>
-      <div className="w-1/2">
-        <img src="./images/game.png" alt="game" />
+      <div className="sm:w-1/2">
+        <img src="./images/game.png" alt="game" className="w-full" />
       </div>
     </motion.div>
   );

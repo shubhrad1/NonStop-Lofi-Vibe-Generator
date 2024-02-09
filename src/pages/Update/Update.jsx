@@ -127,8 +127,13 @@ const Update = () => {
     >
       <Navbar />
       <div className="p-3 max-w-lg mx-auto">
-        <h1 className="text-4xl font-semibold text-center p-16">Profile</h1>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <h1 className="text-4xl font-semibold text-center p-8 md:p-16">
+          Profile
+        </h1>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col md:flex-row md:justify-between gap-4"
+        >
           <input
             type="file"
             ref={fileref}
@@ -191,16 +196,21 @@ const Update = () => {
         <div className="flex justify-between mt-5">
           <span
             onClick={handleDeleteAccount}
-            className="text-red-700 cursor-pointer"
+            className="text-red-700 cursor-pointer md:mt-0"
           >
             Delete Account
           </span>
-          <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+          <span
+            onClick={handleSignOut}
+            className="text-red-700 cursor-pointer md:mt-0"
+          >
             Sign out
           </span>
         </div>
-        <p className="text-red-700 mt-5">{error && "Something went wrong!"}</p>
-        <p className="text-green-700 mt-5">
+        <p className="text-red-700 mt-5 md:text-left">
+          {error && "Something went wrong!"}
+        </p>
+        <p className="text-green-700 mt-5 md:text-left">
           {updateSuccess && "User is updated successfully!"}
         </p>
       </div>

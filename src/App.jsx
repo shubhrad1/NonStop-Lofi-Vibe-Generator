@@ -18,10 +18,9 @@ import Wave from "./pages/Experience/Wave";
 import Contact from "./pages/Contact/Contact";
 import Trial from "./pages/Sound/PlaySong/Trial";
 import Developer from "./pages/Developer/Developer";
-<<<<<<< HEAD
 import ResSuccess from "./pages/Contact/ResSuccess";
-=======
->>>>>>> a08c2e9e7c32b7f3246b3fc81fecd2cb5c471b28
+import VAE from "./pages/Sound/PlaySong/VAE";
+import MusicGenerator from "./pages/Sound/PlaySong/Gen";
 
 const App = () => {
   const location = useLocation();
@@ -44,12 +43,10 @@ const App = () => {
           <Route path="/play" Component={Play} />
           <Route path="/contact" Component={Contact} />
           <Route path="/trial" Component={Trial} />
-<<<<<<< HEAD
           <Route path="/about" Component={Developer} />
           <Route path="/ressuccess" Component={ResSuccess} />
-=======
-          <Route path="/about" Component={Developer}/>
->>>>>>> a08c2e9e7c32b7f3246b3fc81fecd2cb5c471b28
+          <Route path="/vae" Component={VAE} />
+          <Route path="/music" Component={MusicGenerator} />
         </Routes>
       </AnimatePresence>
     </div>

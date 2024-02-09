@@ -58,14 +58,14 @@ const Login = () => {
   };
   return (
     <motion.div
-      className="bg-black h-screen text-white flex items-center justify-center overflow-hidden"
+      className="bg-black text-white flex flex-col sm:h-auto sm:flex-row items-center justify-center md:h-screen md:overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="w-1/2 p-8">
-        <h1 className="text-5xl uppercase tracking-wider text-center">
+      <div className="sm:w-1/2 p-8">
+        <h1 className="text-5xl uppercase tracking-wider text-center mt-10">
           Log In
         </h1>
         <form
@@ -124,11 +124,11 @@ const Login = () => {
           <p>{error ? error.message || "Something Went Wrong" : ""}</p>
         </form>
       </div>
-      <div className="w-1/2 flex items-center justify-center">
+      <div className="sm:w-1/2 flex items-center justify-center">
         <img
           src="./images/lofiimage.png"
           alt="lofiimage"
-          className="rounded-md"
+          className="rounded-md w-3/4 sm:w-full"
         />
       </div>
     </motion.div>

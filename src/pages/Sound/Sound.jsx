@@ -311,9 +311,8 @@ const Sound = () => {
         </button>
       </div>
       <div className="controls absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        {/* Your existing code remains unchanged */}
         <div className="w-full text-center mt-32">
-          <div className="text-9xl p-4 text-center lg:text-9xl uppercase tracking-widest mx-4 lg:mx-40 lg:mt-32 text-white">
+          <div className="p-4 text-center lg:text-9xl uppercase text-8xl tracking-widest mx-4 lg:mx-40 lg:mt-32 text-white">
             {"LofiVibe".split(" ").map((word, index) => {
               return word === " " ? (
                 <div className="head" key={index}>

@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 const OAuth = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleGoogle = async () => {
     try {
       const provider = new GoogleAuthProvider();
@@ -66,23 +67,32 @@ const OAuth = () => {
       console.log(error);
     }
   };
+
   return (
     <div className="text-white mt-2 p-4">
-      <h1 className="mb-2">Sign in with : </h1>
+      <h1 className="mb-2 text-xl sm:text-3xl">Sign in with:</h1>
       <button
         type="button"
         onClick={handleGoogle}
-        className="bg-gradient-to-r from-violet-600 to-pink-500 w-full p-2 flex justify-center items-center text-xl rounded-md hover:scale-110 transition-all duration-300"
+        className="bg-gradient-to-r from-violet-600 to-pink-500 w-full py-3 sm:py-4 px-4 sm:px-6 flex justify-center items-center text-xl sm:text-2xl rounded-md hover:scale-110 transition-all duration-300"
       >
-        <img src="./icons/google.svg" alt="google" className="mr-4" />
-        <span className="">Google</span>
+        <img
+          src="./icons/google.svg"
+          alt="google"
+          className="mr-4 w-6 h-6 sm:w-8 sm:h-8"
+        />
+        <span>Google</span>
       </button>
       <button
         type="button"
-        className="bg-gradient-to-r from-violet-600 to-pink-500 w-full mt-3 flex items-center justify-center p-2 text-xl rounded-md hover:scale-110 transition-all duration-300"
+        className="bg-gradient-to-r from-violet-600 to-pink-500 w-full mt-3 py-3 sm:py-4 px-4 sm:px-6 flex items-center justify-center text-xl sm:text-2xl rounded-md hover:scale-110 transition-all duration-300"
         onClick={handleGithub}
       >
-        <img src="./icons/github.svg" alt="github" className="mr-4" />
+        <img
+          src="./icons/github.svg"
+          alt="github"
+          className="mr-4 w-6 h-6 sm:w-8 sm:h-8"
+        />
         <span>Github</span>
       </button>
     </div>
