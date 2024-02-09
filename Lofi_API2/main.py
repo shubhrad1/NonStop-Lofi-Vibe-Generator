@@ -43,3 +43,5 @@ async def decode_input(input: str):
 
 #     return JSONResponse(content=json_output, headers={"Access-Control-Allow-Origin": "*"})
 
+if __name__ == "__main__":
+    uvicorn.run(app, host='localhost', port=8000)

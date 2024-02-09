@@ -2,7 +2,6 @@ import jsonpickle
 
 from constants import *
 
-
 class Output:
     def __init__(self, title, pred_chords, pred_notes, pred_tempo, pred_key, pred_mode, pred_valence, pred_energy):
         chords = pred_chords.argmax(dim=2)[0].tolist()
