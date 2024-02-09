@@ -41,7 +41,6 @@ def load_songs_in_kern(dataset_path):
                 songs.append(song)
     return songs
 
-
 def has_acceptable_durations(song, acceptable_durations):
     """Boolean routine that returns True if piece has all acceptable duration, False otherwise.
 

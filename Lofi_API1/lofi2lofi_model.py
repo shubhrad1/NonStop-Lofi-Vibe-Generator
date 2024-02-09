@@ -7,7 +7,6 @@ from torch.nn.utils.rnn import pack_padded_sequence
 
 from constants import *
 
-
 class Lofi2LofiModel(nn.Module):
     def __init__(self, device="cuda" if torch.cuda.is_available() else "cpu"):
         super(Lofi2LofiModel, self).__init__()

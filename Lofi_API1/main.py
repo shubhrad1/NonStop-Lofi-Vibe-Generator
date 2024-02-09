@@ -32,7 +32,6 @@ async def decode_input(input: str):
     number_list = json.loads(input)
     json_output = decode(lofi2lofi_model, torch.tensor([number_list]).float())
     return JSONResponse(content=json_output, headers={"Access-Control-Allow-Origin": "*"})
-
 # @app.get("/decode")
 # async def decode_input():
 #     # Generate a random 100x32 array
