@@ -35,6 +35,7 @@ const Front = () => {
             ))}
           </div>
 
+<<<<<<< HEAD
           <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-around mt-8 lg:mt-12 mx-4 lg:mx-40">
             <button className="mb-3 lg:mb-0 lg:mr-6 p-2 lg:p-4 rounded-md bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300">
               <Link to="/experience" className="text-lg lg:text-2xl">
@@ -46,6 +47,20 @@ const Front = () => {
                 AI Generated Music
               </Link>
             </button>
+=======
+          <div className="flex items-center justify-around">
+            <div className="lg:mt-12 mx-4 text-2xl lg:text-2xl mt-24">
+              <button className="mb-3 lg:mb-5 lg:mr-6 p-2 lg:p-4 rounded-md bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300">
+                <Link to="/experience" className="ml-1 mr-6 text-center">
+                  Music Experience
+                </Link>
+              </button>
+              <br key="br1" />
+              <button className="p-2 lg:p-4 rounded-md bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300">
+                <Link to="/play">rated Music</Link>
+              </button>
+            </div>
+>>>>>>> 47e87c7 (Frontend favicon added)
           </div>
         </div>
       </Layout>
