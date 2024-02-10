@@ -6,7 +6,7 @@ const VAE = () => {
   const handleGenerateMusic = async () => {
     setIsGenerating(true);
     try {
-      const response = await fetch("http://localhost:5000/decode");
+      const response = await fetch(`http://localhost:8000/predict?num_sequences=$variable`);
       if (!response.ok) {
         throw new Error("Failed to generate music");
       }
