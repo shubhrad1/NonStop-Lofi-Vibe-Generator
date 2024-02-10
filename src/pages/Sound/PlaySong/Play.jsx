@@ -4,9 +4,8 @@ import PauseIcon from "./PauseComponent";
 import LatentSpace from "./LatentSpace";
 
 const Play = () => {
-
   const [play, setPlay] = useState(false);
-  const [sequences, SetSequences] = useState(0);
+  const [sequences, setSequences] = useState(0);
   const [musicUrl, setMusicUrl] = useState(null);
 
   const handlePlay = () => {
@@ -16,16 +15,22 @@ const Play = () => {
   const handleGenerate = async () => {
     if (sequences <= 0) return;
     try {
-      const response = await fetch(`http://localhost:8000/predict?num_sequences=${sequences}`)
+      const response = await fetch(
+        `http://localhost:8000/predict?num_sequences=${sequences}`
+      );
       if (!response.ok) {
-        throw new Error('Failed to generate music');
+        throw new Error("Failed to generate music");
       }
       const music = await response.json();
       setMusicUrl(music.url);
     } catch (error) {
       console.log(error);
     }
-  }
+  };
+
+  const handleChange = (event) => {
+    setSequences(parseInt(event.target.value));
+  };
 
   return (
     <div className="relative h-screen bg-black">
@@ -57,8 +62,13 @@ const Play = () => {
           name="sequences"
           id="sequence"
           placeholder="Enter the number of sequences"
+          value={sequences}
+          onChange={handleChange}
         />
-        <button className="text-white p-4 bg-blue-600 text-xl rounded-md mb-8 ml-56">
+        <button
+          onClick={handleGenerate}
+          className="text-white p-4 bg-blue-600 text-xl rounded-md mb-8 ml-4"
+        >
           Generate
         </button>
       </div>
