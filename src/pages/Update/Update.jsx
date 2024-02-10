@@ -127,13 +127,8 @@ const Update = () => {
     >
       <Navbar />
       <div className="p-3 max-w-lg mx-auto">
-        <h1 className="text-4xl font-semibold text-center p-8 md:p-16">
-          Profile
-        </h1>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col md:flex-row md:justify-between gap-4"
-        >
+        <h1 className="text-4xl font-semibold text-center p-16">Profile</h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="file"
             ref={fileref}

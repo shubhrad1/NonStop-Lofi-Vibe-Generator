@@ -58,7 +58,7 @@ const Login = () => {
   };
   return (
     <motion.div
-      className="bg-black text-white flex flex-col sm:h-auto sm:flex-row items-center justify-center md:h-screen md:overflow-hidden"
+      className="bg-black h-screen text-white flex items-center justify-center overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
