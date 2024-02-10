@@ -153,9 +153,15 @@ const DigitalBrain = () => {
     left: 0,
   };
   return (
-    <Canvas style={canvasStyle}>
+    <>
+    <audio controls={false} loop autoPlay>
+      <source src="./music2.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <Canvas style={{ width: "100vw", height: "100vh" }}>
       <Scene />
     </Canvas>
+  </>
   );
 };
 

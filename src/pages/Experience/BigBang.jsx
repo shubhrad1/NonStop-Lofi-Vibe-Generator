@@ -81,9 +81,15 @@ const Scene = () => {
 
 const BigBang = () => {
   return (
-    <Canvas style={{ width: "100vw", height: "100vh" }}>
-      <Scene />
-    </Canvas>
+    <>
+      <audio controls={false} loop autoPlay>
+        <source src="./music1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <Canvas style={{ width: "100vw", height: "100vh" }}>
+        <Scene />
+      </Canvas>
+    </>
   );
 };
 
