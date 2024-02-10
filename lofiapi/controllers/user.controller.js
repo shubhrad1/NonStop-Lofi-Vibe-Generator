@@ -1,8 +1,20 @@
+import Feedback from "../models/feedback.model.js";
 import User from "../models/user.model.js";
 import { errHandler } from "../utils/error.js";
 
 export const test = (req, res) => {
     res.send('Hello World');
+}
+
+export const feedback = async (req, res) => {
+  try{
+    const {email, response} = req.body;
+    const feedback = new Feedback({email, response});
+    await feedback.save();
+    res.status(201).json({message: 'Feedback sent'});
+  }catch(error){
+    console.log(error);
+  }
 }
 
 export const updateUser = async (req, res, next) => {

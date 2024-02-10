@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { errHandler } from './error.js';
 
-export const verifyToken = (req, res, next) => {
+export const verifyToken = async (req, res, next) => {
     const token = req.cookies.access_token;
 
     if (!token) return next(errHandler(401, 'You are not authenticated!'));
@@ -12,6 +12,4 @@ export const verifyToken = (req, res, next) => {
         req.user = user;
         next();
     });
-
-
 }
