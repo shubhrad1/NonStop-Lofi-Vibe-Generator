@@ -16,10 +16,9 @@ import Loading from "./pages/loading/Loading";
 import Play from "./pages/Sound/PlaySong/Play";
 import Wave from "./pages/Experience/Wave";
 import Contact from "./pages/Contact/Contact";
+// import Trial from "./pages/Sound/PlaySong/Trial";
 import Developer from "./pages/Developer/Developer";
 import ResSuccess from "./pages/Contact/ResSuccess";
-import VAE from "./pages/Sound/PlaySong/VAE";
-import MusicGenerator from "./pages/Sound/PlaySong/Gen";
 
 const App = () => {
   const location = useLocation();
@@ -41,13 +40,13 @@ const App = () => {
           <Route path="/" Component={FrontPage} />
           <Route path="/play" Component={Play} />
           <Route path="/contact" Component={Contact} />
+          {/* <Route path="/trial" Component={Trial} /> */}
           <Route path="/about" Component={Developer} />
           <Route path="/ressuccess" Component={ResSuccess} />
-          <Route path="/vae" Component={VAE} />
-          <Route path="/music" Component={MusicGenerator} />
-        </Routes>
-      </AnimatePresence>
-    </div>
+          <Route path="/about" Component={Developer} />
+        </Routes >
+      </AnimatePresence >
+    </div >
   );
 };
 

@@ -14,15 +14,15 @@ const Play = () => {
   };
 
   const handleGenerate = async () => {
-    if(sequences <= 0) return;
-    try{
+    if (sequences <= 0) return;
+    try {
       const response = await fetch(`http://localhost:8000/predict?num_sequences=${sequences}`)
-      if(!response.ok){
+      if (!response.ok) {
         throw new Error('Failed to generate music');
       }
       const music = await response.json();
       setMusicUrl(music.url);
-    }catch(error){
+    } catch (error) {
       console.log(error);
     }
   }
@@ -56,11 +56,9 @@ const Play = () => {
           type="number"
           name="sequences"
           id="sequence"
-          value={sequences}
           placeholder="Enter the number of sequences"
-          onChange={(e) => SetSequences(parseInt(e.target.value))}
         />
-        <button onClick={handleGenerate} className="text-white p-4 bg-blue-600 text-xl rounded-md mb-8 ml-56">
+        <button className="text-white p-4 bg-blue-600 text-xl rounded-md mb-8 ml-56">
           Generate
         </button>
       </div>

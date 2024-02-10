@@ -83,52 +83,53 @@ const Navbar = () => {
             ☰
           </button>
         </div>
-
-        <div className="lg:flex items-center uppercase block text-2xl">
-          <Link
-            to="/"
-            className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
-          >
-            Home
-          </Link>
-          {currentUser ? (
-            <div className="flex items-center uppercase text-2xl mr-5">
-              <Link to="/profile">
-                <img
-                  src={currentUser.profilePicture}
-                  alt="profile"
-                  className="h-10 w-10 mr-4 rounded-full object-cover"
-                />
-              </Link>
-            </div>
-          ) : (
-            <div className="flex items-center uppercase text-2xl">
-              <Link
-                to="/about"
-                className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
-              >
-                About
-              </Link>
-              <Link
-                to="/contact"
-                className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
-              >
-                Contact
-              </Link>
-              <Link
-                to="/login"
-                className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
-              >
-                Log In
-              </Link>
-              <Link
-                to="/signup"
-                className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-colors duration-300 rounded-lg p-2"
-              >
-                Sign up
-              </Link>
-            </div>
-          )}
+        <div>
+          <div className="hidden lg:flex items-center uppercase text-2xl">
+            <Link
+              to="/"
+              className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
+            >
+              Home
+            </Link>
+            {currentUser ? (
+              <div className="hidden lg:flex items-center uppercase text-2xl mr-5">
+                <Link to="/profile">
+                  <img
+                    src={currentUser.profilePicture}
+                    alt="profile"
+                    className="item h-10 w-10 mr-4 rounded-full object-cover"
+                  />
+                </Link>
+              </div>
+            ) : (
+              <div className="hidden lg:flex items-center uppercase text-2xl">
+                <Link
+                  to="/about"
+                  className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
+                >
+                  Contact
+                </Link>
+                <Link
+                  to="/login"
+                  className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
+                >
+                  Log In
+                </Link>
+                <Link
+                  to="/signup"
+                  className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-colors duration-300 rounded-lg p-2"
+                >
+                  Sign up
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

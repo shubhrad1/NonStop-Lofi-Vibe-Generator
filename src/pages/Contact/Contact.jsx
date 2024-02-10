@@ -33,55 +33,54 @@ const Contact = () => {
   };
   return (
     <motion.div
-      className="bg-black h-auto text-white"
+      className="bg-black h-screen text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
       <Navbar />
-      <div className="flex items-center justify-center h-full">
-        <form
-          action=""
-          className="mt-24 w-full max-w-lg"
-          onSubmit={handleSubmit}
-        >
-          <h1 className="p-2 text-3xl text-center mt-10">Your Feedback</h1>
-          <p className="text-2xl tracking-wide text-center">
-            Please consider giving valuable feedback on our project which will
-            help us make LofiVibe even better.
-          </p>
+      <div className="">
+        <div className="flex items-center justify-center">
+          <form action="" className="mt-24" onSubmit={handleSubmit}>
+            <h1 className="p-2 text-3xl text-center">Your Feedback</h1>
+            <p className="text-2xl tracking-wide">
+              Please consider giving a valuable feedback on our project which
+              will help us make lofivibe even better
+            </p>
 
-          <div className="mt-20">
-            <div className="mb-8">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                onChange={handleChange}
-                className="p-4 w-full bg-black border-solid border-2 border-white rounded-md"
-                placeholder="Your email address"
-              />
+            <div className="flex items-center justify-center flex-col mt-20">
+              <div className="">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  onChange={handleChange}
+                  className="p-4 w-full mr-28 bg-black border-solid border-2 border-white rounded-md"
+                  placeholder="Your email address"
+                />
+              </div>
+              <div className="mt-8">
+                <textarea
+                  name="response"
+                  id="response"
+                  cols="30"
+                  rows="10"
+                  onChange={handleChange}
+                  className="p-6 bg-black border-solid border-2 border-white rounded-md"
+                  placeholder="Your Feedback"
+                />
+                <br />
+                <button
+                  type="submit"
+                  className="mt-3 w-full text-white bg-gradient-to-r from-violet-600 to-pink-500 font-semibold p-3 rounded-md text-xl hover:scale-110 transition-all duration-300"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
-            <div className="mb-8">
-              <textarea
-                name="response"
-                id="response"
-                cols="30"
-                rows="10"
-                onChange={handleChange}
-                className="p-6 w-full bg-black border-solid border-2 border-white rounded-md"
-                placeholder="Your Feedback"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full text-white bg-gradient-to-r from-violet-600 to-pink-500 font-semibold p-3 rounded-md text-xl hover:scale-110 transition-all duration-300"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </motion.div>
   );

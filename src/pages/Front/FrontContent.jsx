@@ -81,14 +81,14 @@ const FrontContent = () => {
               src="./images/imgg3.webp"
               alt="lofi"
               loading="lazy"
-              className="h-full w-full md:w-screen p-0 object-cover"
+              className="h-full w-screen p-0"
             />
           </div>
           <div className="absolute inset-0 flex flex-col items-center p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl heading p-5 bg-gradient-to-r from-pink-600 to-blue-600 inline-block text-transparent bg-clip-text text-center">
               Soulful Lofi Beats
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white p-5 opacity-90">
+            <p className="text-2xl text-white p-5 opacity-70">
               Immerse yourself in an ever-expanding collection of mesmerizing
               Lofi tracks meticulously crafted by our AI models. Let the gentle
               rhythms and mellow tunes set the perfect ambiance for relaxation.
@@ -101,14 +101,14 @@ const FrontContent = () => {
               src="./images/imgg4.avif"
               alt="chill"
               loading="lazy"
-              className="h-full w-full md:w-screen p-0 object-cover"
+              className="h-full w-screen p-0"
             />
           </div>
           <div className="absolute inset-0 flex flex-col items-center p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl heading bg-gradient-to-r p-5 from-pink-600 to-blue-600 inline-block text-transparent bg-clip-text text-center">
               Infinite Chill Vibes
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white p-5 opacity-90">
+            <p className="text-2xl text-white p-5 opacity-70">
               Explore an endless stream of chill-out music that adapts to your
               mood and setting. Whether you're studying, working, or unwinding,
               LofiVibe delivers the perfect soundtrack for every moment.
@@ -121,14 +121,14 @@ const FrontContent = () => {
               src="./images/imgg1.jpg"
               alt="img-1"
               loading="lazy"
-              className="h-full w-full md:w-screen p-0 object-cover"
+              className="h-full w-screen p-0"
             />
           </div>
           <div className="absolute inset-0 flex flex-col items-center p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl heading bg-gradient-to-r p-5 from-pink-600 to-blue-600 inline-block text-transparent bg-clip-text text-center">
               Personalized Playlists
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white mb-3 text-center p-5 opacity-90">
+            <p className="text-2xl mb-3 text-white text-center p-5 opacity-70">
               Tailor your listening experience. Curate playlists that resonate
               with your preferences, discovering new AI-generated tracks that
               match your unique taste in Lofi music.
@@ -141,14 +141,14 @@ const FrontContent = () => {
               src="./images/imgg8.avif"
               alt="portal"
               loading="lazy"
-              className="h-full w-full md:w-screen p-0 object-cover"
+              className="h-full w-screen p-0"
             />
           </div>
           <div className="absolute inset-0 flex flex-col items-center p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl heading bg-gradient-to-r p-5 from-pink-600 to-blue-600 inline-block text-transparent bg-clip-text text-center">
               Dive into the LofiVibe
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white mb-3 text-center p-5 opacity-90">
+            <p className="text-2xl mb-3 text-white text-center p-5 opacity-70">
               LofiVibe is your portal to a realm where technology meets
               tranquility. Step into a universe where relaxation is an art form
               and where melodies are woven by algorithms, delivering a unique
