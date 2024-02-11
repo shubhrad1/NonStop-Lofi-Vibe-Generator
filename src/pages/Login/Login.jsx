@@ -9,6 +9,7 @@ import {
 } from "../../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import OAuth from "../../components/OAuth";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -64,10 +65,15 @@ const Login = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="sm:w-1/2 p-8">
-        <h1 className="text-5xl uppercase tracking-wider text-center mt-10">
+      <div className="sm:w-1/2 p-12">
+        <h1 className="text-5xl uppercase tracking-wider text-center mt-20">
           Log In
         </h1>
+        <div className="flex justify-center items-center mt-5 text-lg">
+          <span>
+            New to LofiVibe? <Link to="/signup">Sign Up</Link>
+          </span>
+        </div>
         <form
           onSubmit={handleSubmit}
           action=""
@@ -75,13 +81,13 @@ const Login = () => {
           className="z-50 p-8"
         >
           <div className="mt-5 pl-4 pr-4 pb-3">
-            <span className="text-2xl">Email</span>
+            <span className="text-xl">Email</span>
             <br />
             <input
               type="email"
               id="email"
               placeholder="Enter Email"
-              className="mt-3 w-full bg-black border-solid border-2 border-white text-white p-2 rounded-md text-xl"
+              className="mt-3 w-full bg-black border-solid border-2 border-white text-white p-2 rounded-md text-lg"
               autoComplete="false"
               onChange={handleChange}
             />
@@ -89,14 +95,14 @@ const Login = () => {
           </div>
 
           <div className="mt-5 pl-4 pr-4 pb-3">
-            <span className="text-2xl">Password</span>
+            <span className="text-xl">Password</span>
             <br />
             <div className="flex relative">
               <input
                 type={show ? "text" : "password"}
                 placeholder="Password"
                 id="password"
-                className="mt-2 w-full bg-black text-white rounded-md p-2 border-solid border-2 border-white text-xl pl-2"
+                className="mt-2 w-full bg-black text-white rounded-md p-2 border-solid border-2 border-white text-lg pl-2"
                 autoComplete="false"
                 onChange={handleChange}
               />
@@ -114,7 +120,7 @@ const Login = () => {
           <div className="flex items-center justify-center p-4">
             <button
               type="submit"
-              className="mt-8 text-white bg-gradient-to-r from-violet-600 to-pink-500 font-semibold w-full p-3 rounded-md text-xl hover:scale-110 transition-all duration-300"
+              className="mt-2 text-white bg-gradient-to-r from-violet-600 to-pink-500 font-semibold w-full p-3 rounded-md text-xl hover:scale-110 transition-all duration-300"
             >
               {loading ? "Loading..." : "Log In"}
             </button>

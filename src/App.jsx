@@ -12,13 +12,13 @@ import Update from "./pages/Update/Update";
 import DigitalBrain from "./pages/Experience/DigitalBrain";
 import Main from "./pages/Experience/Main";
 import BigBang from "./pages/Experience/BigBang";
-import Loading from "./pages/loading/Loading";
 import Play from "./pages/Sound/PlaySong/Play";
 import Wave from "./pages/Experience/Wave";
 import Contact from "./pages/Contact/Contact";
-// import Trial from "./pages/Sound/PlaySong/Trial";
 import Developer from "./pages/Developer/Developer";
 import ResSuccess from "./pages/Contact/ResSuccess";
+import Compose from "./pages/Compose/Compose";
+import Research from "./pages/Research/Research";
 
 const App = () => {
   const location = useLocation();
@@ -35,18 +35,18 @@ const App = () => {
             <Route path="/update" Component={Update} />
           </Route>
           <Route path="/brain" Component={DigitalBrain} />
-          <Route path="/load" Component={Loading} />
           <Route path="/wave" Component={Wave} />
           <Route path="/" Component={FrontPage} />
           <Route path="/play" Component={Play} />
           <Route path="/contact" Component={Contact} />
-          {/* <Route path="/trial" Component={Trial} /> */}
           <Route path="/about" Component={Developer} />
           <Route path="/ressuccess" Component={ResSuccess} />
           <Route path="/about" Component={Developer} />
-        </Routes >
-      </AnimatePresence >
-    </div >
+          <Route path="/compose" Component={Compose} />
+          <Route path="/research" Component={Research} />
+        </Routes>
+      </AnimatePresence>
+    </div>
   );
 };
 

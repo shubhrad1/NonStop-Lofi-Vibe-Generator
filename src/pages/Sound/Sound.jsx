@@ -11,7 +11,6 @@ import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPa
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import gsap from "gsap";
 
 const Sound = () => {
   const refContainer = useRef(null);
@@ -28,18 +27,6 @@ const Sound = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
-  useEffect(() => {
-    let tl = gsap.timeline();
-    tl.from(".head", {
-      y: 300,
-      stagger: {
-        each: 5,
-      },
-      duration: 2.5,
-      ease: "expo.inOut",
-    });
-  }, []);
 
   useEffect(() => {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -238,7 +225,7 @@ const Sound = () => {
 
     const audioLoader = new THREE.AudioLoader();
 
-    audioLoader.load("./Beats.mp3", function (buffer) {
+    audioLoader.load("./music1.mp3", function (buffer) {
       sound.setBuffer(buffer);
       setAudio(sound);
     });
@@ -336,7 +323,9 @@ const Sound = () => {
             </button>
             <br class="lg:hidden" />
             <button className="p-2 lg:p-4 rounded-md bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300">
-              <Link to="https://lofivibe-oaptuqixw-aryannanda17s-projects.vercel.app/">AI Generated Music</Link>
+              <Link to="https://lofivibe-oaptuqixw-aryannanda17s-projects.vercel.app/">
+                AI Generated Music
+              </Link>
             </button>
           </div>
         </div>

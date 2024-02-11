@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PlayIcon from "./PlayComponent";
 import PauseIcon from "./PauseComponent";
-import LatentSpace from "./LatentSpace";
 
 const Play = () => {
   const [play, setPlay] = useState(false);
@@ -47,24 +46,29 @@ const Play = () => {
         <span className="text-white mt-8 text-4xl">
           Play Infinite Lofi Music
         </span>
+        <br />
+        <div className="mt-20">
+          <label htmlFor="lofi-sequence" className="text-xl">
+            Enter the number of sequences :{" "}
+          </label>
+          <br />
+          <input
+            type="number"
+            name="sequences"
+            id="sequence"
+            placeholder=""
+            value={sequences}
+            className="mt-5 p-1 text-xl text-black"
+            onChange={handleChange}
+          />
+        </div>
       </div>
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-5">
-        <button onClick={handlePlay} className="text-white">
+        <button onClick={handlePlay} className="text-white ml-28">
           {play ? <PauseIcon /> : <PlayIcon />}
         </button>
       </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-28">
-        <LatentSpace />
-      </div>
-      <div className="absolute bottom-0 right-1/2 transform translate-x-1/2 flex items-center justify-center">
-        <input
-          type="number"
-          name="sequences"
-          id="sequence"
-          placeholder="Enter the number of sequences"
-          value={sequences}
-          onChange={handleChange}
-        />
+      <div className="absolute bottom-0 right-1/2 transform flex items-center justify-between">
         <button
           onClick={handleGenerate}
           className="text-white p-4 bg-blue-600 text-xl rounded-md mb-8 ml-4"

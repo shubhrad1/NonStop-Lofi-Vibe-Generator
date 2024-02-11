@@ -70,7 +70,7 @@ const OAuth = () => {
 
   return (
     <div className="text-white mt-2 p-4">
-      <h1 className="mb-2 text-xl sm:text-3xl">Sign in with:</h1>
+      <h1 className="mb-2 text-xl sm:text-xl">Sign in with:</h1>
       <button
         type="button"
         onClick={handleGoogle}

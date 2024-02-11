@@ -27,36 +27,6 @@ const Navbar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    gsap.from(".logo", {
-      x: -30,
-      opacity: 0,
-      delay: 1,
-    });
-    gsap.to(".logo", {
-      x: 0,
-      opacity: 1,
-      duration: 2,
-      ease: "power3.inOut",
-    });
-
-    gsap.from(".item", {
-      y: -300,
-      opacity: 0,
-      delay: 1,
-    });
-
-    gsap.to(".item", {
-      y: 0,
-      opacity: 1,
-      duration: 2,
-      ease: "expo.inOut",
-      stagger: {
-        each: 0.1,
-      },
-    });
-  }, []);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -100,14 +70,15 @@ const Navbar = () => {
                     className="item h-10 w-10 mr-4 rounded-full object-cover"
                   />
                 </Link>
+                <Link to="/compose">Compose Music</Link>
               </div>
             ) : (
               <div className="hidden lg:flex items-center uppercase text-2xl">
                 <Link
-                  to="/about"
+                  to="/research"
                   className="item mr-8 bg-gradient-to-r from-violet-600 to-pink-500 transition-all duration-300 rounded-lg p-2"
                 >
-                  About
+                  Research
                 </Link>
                 <Link
                   to="/contact"
